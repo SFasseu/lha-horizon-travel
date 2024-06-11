@@ -17,8 +17,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin')}}/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{asset('admin')}}/assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{('admin')}}/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="{{('admin')}}/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Material Dashboard Dark Edition by Creative Tim
@@ -28,86 +28,73 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="{{asset('admin')}}/assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <link href="{{('admin')}}/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{asset('admin')}}/assets/demo/demo.css" rel="stylesheet" />
+  <link href="{{('admin')}}/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="dark-edition">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{{asset('admin')}}/assets/img/sidebar-2.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{{('admin')}}/img/sidebar-2.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          HORIZON TRAVEL
+          Creative Tim
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="/home">
+          <li class="nav-item  ">
+            <a class="nav-link" href="./dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+          <li class="nav-item active ">
+            <a class="nav-link" href="./user.html">
               <i class="material-icons">person</i>
-              <p>user</p>
+              <p>User Profile</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">flight</i>
-              <p>destination</p>
+          <li class="nav-item ">
+            <a class="nav-link" href="./tables.html">
+              <i class="material-icons">content_paste</i>
+              <p>Table List</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">photo</i>
-              <p>offre touristique</p>
+          <li class="nav-item ">
+            <a class="nav-link" href="./typography.html">
+              <i class="material-icons">library_books</i>
+              <p>Typography</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">home</i>
-              <p>agence</p>
+          <li class="nav-item ">
+            <a class="nav-link" href="./icons.html">
+              <i class="material-icons">bubble_chart</i>
+              <p>Icons</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">home</i>
-              <p>hébergement</p>
+          <li class="nav-item ">
+            <a class="nav-link" href="./map.html">
+              <i class="material-icons">location_ons</i>
+              <p>Maps</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">person</i>
-              <p>touriste</p>
+          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">book</i>
-              <p>réservation</p>
-            </a>
-          </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">email</i>
-              <p>avis</p>
-            </a>
-          </li>
+          <!-- <li class="nav-item active-pro ">
+                <a class="nav-link" href="./upgrade.html">
+                    <i class="material-icons">unarchive</i>
+                    <p>Upgrade to PRO</p>
+                </a>
+            </li> -->
+        </ul>
       </div>
     </div>
     <div class="main-panel">
@@ -115,7 +102,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+            <a class="navbar-brand" href="javascript:void(0)">User Profile</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -171,9 +158,116 @@
         </div>
       </nav>
       <!-- End Navbar -->
-     
       <div class="content">
-      @yield('content')
+        @yield('content')
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Edit Profile</h4>
+                  <p class="card-category">Complete your profile</p>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Company (disabled)</label>
+                          <input type="text" class="form-control" disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Username</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Email address</label>
+                          <input type="email" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Fist Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Last Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Adress</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">City</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Country</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Postal Code</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>About Me</label>
+                          <div class="form-group">
+                            <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="{{('admin')}}/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-category">CEO / Co-Founder</h6>
+                  <h4 class="card-title">Alec Thompson</h4>
+                  <p class="card-description">
+                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  </p>
+                  <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <footer class="footer">
         <div class="container-fluid">
@@ -236,22 +330,22 @@
         <li class="header-title">Images</li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-1.jpg" alt="">
+            <img src="{{('admin')}}/img/sidebar-1.jpg" alt="">
           </a>
         </li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-2.jpg" alt="">
+            <img src="{{('admin')}}/img/sidebar-2.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-3.jpg" alt="">
+            <img src="{{('admin')}}/img/sidebar-3.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-4.jpg" alt="">
+            <img src="{{('admin')}}/img/sidebar-4.jpg" alt="">
           </a>
         </li>
         <li class="button-container">
@@ -282,23 +376,23 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="{{asset('admin')}}/assets/js/core/jquery.min.js"></script>
-  <script src="{{asset('admin')}}/assets/js/core/popper.min.js"></script>
-  <script src="{{asset('admin')}}/assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="{{('admin')}}/js/core/jquery.min.js"></script>
+  <script src="{{('admin')}}/js/core/popper.min.js"></script>
+  <script src="{{('admin')}}/js/core/bootstrap-material-design.min.js"></script>
   <script src="https://unpkg.com/default-passive-events"></script>
-  <script src="{{asset('admin')}}/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="{{('admin')}}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
-  <script src="{{asset('admin')}}/assets/js/plugins/chartist.min.js"></script>
+  <script src="{{('admin')}}/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="{{asset('admin')}}/assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="{{('admin')}}/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{{asset('admin')}}/assets/js/material-dashboard.js?v=2.1.0"></script>
+  <script src="{{('admin')}}/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="{{asset('admin')}}/assets/demo/demo.js"></script>
+  <script src="{{('admin')}}/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -459,13 +553,6 @@
 
         });
       });
-    });
-  </script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
-
     });
   </script>
 </body>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->unsignedBigInteger('offre_id');
-            $table->foreign('offre_id')->references('id')->on('offre_touristiques');
+            $table->foreign('offre_id')->references('id')->on('offres');
 
             
             $table->text('contenu');

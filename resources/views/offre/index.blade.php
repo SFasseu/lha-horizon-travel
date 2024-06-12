@@ -19,13 +19,13 @@
                           Nom
                         </th>
                         <th>
-                          pays
-                        </th>
-                        <th>
-                          Région
-                        </th>
-                        <th>
                           Description
+                        </th>
+                        <th>
+                          Prix
+                        </th>
+                        <th>
+                          Durée
                         </th>
                       </tr></thead>
                      

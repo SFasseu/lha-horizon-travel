@@ -19,13 +19,11 @@
                           Nom
                         </th>
                         <th>
-                          pays
+                          Adresse
                         </th>
+                        
                         <th>
-                          Région
-                        </th>
-                        <th>
-                          Description
+                          Type
                         </th>
                       </tr></thead>
                      

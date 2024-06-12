@@ -16,7 +16,7 @@
                       <thead class=" text-primary">
                         
                         <th>
-                          Name
+                          Nom
                         </th>
                         <th>
                           email
@@ -38,11 +38,12 @@
                           {{$user->email}}
                           </td>
                           <td>
-                          {{$user->create_at}}
+                          {{$user->created_at}}
                           </td>
                           
                           <td class="text-primary">
-                          #
+                          <a href="#pablo" class="btn btn-primary btn-round">Modifier</a>
+                          <a href="#pablo" class="btn btn-danger btn-round">Supprimer</a>
                           </td>
                         </tr>
                         @endforeach

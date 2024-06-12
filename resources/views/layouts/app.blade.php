@@ -61,14 +61,14 @@
           </li>
 
           <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+            <a class="nav-link" href="{{route('destination.index')}}">
               <i class="material-icons">flight</i>
               <p>destination</p>
             </a>
           </li>
 
           <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+            <a class="nav-link" href="{{route('offre.index')}}">
               <i class="material-icons">photo</i>
               <p>offre touristique</p>
             </a>
@@ -82,28 +82,28 @@
           </li>
 
           <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+            <a class="nav-link" href="{{route('hebergement.index')}}">
               <i class="material-icons">home</i>
-              <p>hébergement</p>
+              <p>hebergement</p>
             </a>
           </li>
 
           <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+            <a class="nav-link" href="{{route('touriste.index')}}">
               <i class="material-icons">person</i>
               <p>touriste</p>
             </a>
           </li>
 
           <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+            <a class="nav-link" href="{{route('reservation.index')}}">
               <i class="material-icons">book</i>
               <p>réservation</p>
             </a>
           </li>
 
           <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+            <a class="nav-link" href="{{route('avis.index')}}">
               <i class="material-icons">email</i>
               <p>avis</p>
             </a>

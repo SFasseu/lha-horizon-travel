@@ -7,7 +7,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">All Users</h4>
+                  <h4 class="card-title ">Touristes</h4>
                   
                 </div>
                 <div class="card-body">
@@ -19,10 +19,18 @@
                           Nationalité
                         </th>
                         <th>
-                          préférences
+                          preferences
                         </th>
-                        
                       
+                          
+                          <td class="text-primary">
+                          <a href="#pablo" class="btn btn-primary btn-round">Modifier</a>
+                          <a href="#pablo" class="btn btn-danger btn-round">Supprimer</a>
+                          </td>
+                        </tr>
+                       
+                        
+                      </tbody>
                     </table>
                   </div>
                 </div>

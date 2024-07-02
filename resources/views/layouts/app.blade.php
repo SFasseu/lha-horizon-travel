@@ -17,97 +17,106 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin')}}/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{asset('admin')}}/assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('/admin')}}/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="{{asset('/admin')}}/assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard Dark Edition by Creative Tim
+  Dashboard horizo-travel
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="{{asset('admin')}}/assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <link href="{{asset('/admin')}}/assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{asset('admin')}}/assets/demo/demo.css" rel="stylesheet" />
+  <link href="{{asset('/admin')}}/assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="dark-edition">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{{asset('admin')}}/assets/img/sidebar-2.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{{asset('/material')}}/assets/img/sidebar-2.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          HORIZON TRAVEL
+          horizon-travel
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
             <a class="nav-link" href="/home">
-              <i class="material-icons">dashboard</i>
+              <i class="material-icons"></i>
               <p>Dashboard</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/user">
+              <i class="material-icons">person</i>
+              <p>Utilisateurs</p>
+            </a>
+          </li>
           
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
+          <li class="nav-item ">
+            <a class="nav-link" href="/touriste">
               <i class="material-icons">person</i>
-              <p>user</p>
+              <p>touristes</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('destination.index')}}">
+          <li class="nav-item ">
+            <a class="nav-link" href="/agence">
+              <i class="material-icons">home</i>
+              <p>agences</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/destination">
+              <div>
               <i class="material-icons">flight</i>
-              <p>destination</p>
+              <p>destinations</p>
+              </div>
+           
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('offre.index')}}">
-              <i class="material-icons">photo</i>
-              <p>offre touristique</p>
+          <li class="nav-item ">
+            <a class="nav-link" href="/destination">
+              <i class="material-icons">hotel</i>
+              <p>hebergements</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('user.index')}}">
-              <i class="material-icons">home</i>
-              <p>agence</p>
+          <li class="nav-item ">
+            <a class="nav-link" href="./offre">
+              <i class="material-icons">list</i>
+              <p>offre_touristiques</p>
             </a>
           </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('hebergement.index')}}">
-              <i class="material-icons">home</i>
-              <p>hebergement</p>
-            </a>
-          </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('touriste.index')}}">
-              <i class="material-icons">person</i>
-              <p>touriste</p>
-            </a>
-          </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('reservation.index')}}">
-              <i class="material-icons">book</i>
-              <p>réservation</p>
-            </a>
-          </li>
-
-          <li class="nav-item   ">
-            <a class="nav-link" href="{{route('avis.index')}}">
-              <i class="material-icons">email</i>
+          <li class="nav-item ">
+            <a class="nav-link" href="./offre">
+              <i class="material-icons">message</i>
               <p>avis</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/reservation">
+              <i class="material-icons">book</i>
+              <p>reservations</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>notifications</p>
+            </a>
+          </li>
+          <!-- <li class="nav-item active-pro ">
+                <a class="nav-link" href="./upgrade.html">
+                    <i class="material-icons">unarchive</i>
+                    <p>Upgrade to PRO</p>
+                </a>
+            </li> -->
+        </ul>
       </div>
     </div>
     <div class="main-panel">
@@ -126,7 +135,7 @@
           <div class="collapse navbar-collapse justify-content-end">
             <form class="navbar-form">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="text" value="" class="form-control" placeholder="Search{{asset('/material')}}.">
                 <button type="submit" class="btn btn-default btn-round btn-just-icon">
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>
@@ -158,53 +167,51 @@
                   <a class="dropdown-item" href="javascript:void(0)">Another One</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  <i class="material-icons">person</i>
-                  <p class="d-lg-none d-md-block">
-                    Account
-                  </p>
-                </a>
-              </li>
+              <li>
+              <form action="{{route('logout')}}" method="post">
+              @csrf
+                                                
+              @method('post')       
+                                                
+             <button type="submit" class="btn btn-danger btn-sm btn-mb-6">deconnexion</button>
+              </form>                       
+              </li>                                
             </ul>
           </div>
         </div>
       </nav>
       <!-- End Navbar -->
-     
       <div class="content">
       @yield('content')
+
       </div>
       <footer class="footer">
-        <div class="container-fluid">
+      <div class="container-fluid">
           <nav class="float-left">
             <ul>
               <li>
                 <a href="https://www.creative-tim.com">
-                  Creative Tim
+                 
                 </a>
               </li>
               <li>
                 <a href="https://creative-tim.com/presentation">
-                  About Us
+                  
                 </a>
               </li>
               <li>
                 <a href="http://blog.creative-tim.com">
-                  Blog
+                  
                 </a>
               </li>
               <li>
                 <a href="https://www.creative-tim.com/license">
-                  Licenses
+                  
                 </a>
               </li>
             </ul>
           </nav>
-          <div class="copyright float-right" id="date">
-            , made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
+         
         </div>
       </footer>
       <script>
@@ -236,22 +243,22 @@
         <li class="header-title">Images</li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-1.jpg" alt="">
+            <img src="{{asset('/material')}}/assets/img/sidebar-1.jpg" alt="">
           </a>
         </li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-2.jpg" alt="">
+            <img src="{{asset('/material')}}/assets/img/sidebar-2.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-3.jpg" alt="">
+            <img src="{{asset('/material')}}/assets/img/sidebar-3.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('admin')}}/assets/img/sidebar-4.jpg" alt="">
+            <img src="{{asset('/material')}}/assets/img/sidebar-4.jpg" alt="">
           </a>
         </li>
         <li class="button-container">
@@ -282,23 +289,23 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="{{asset('admin')}}/assets/js/core/jquery.min.js"></script>
-  <script src="{{asset('admin')}}/assets/js/core/popper.min.js"></script>
-  <script src="{{asset('admin')}}/assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="{{asset('/material')}}/assets/js/core/jquery.min.js"></script>
+  <script src="{{asset('/material')}}/assets/js/core/popper.min.js"></script>
+  <script src="{{asset('/material')}}/assets/js/core/bootstrap-material-design.min.js"></script>
   <script src="https://unpkg.com/default-passive-events"></script>
-  <script src="{{asset('admin')}}/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="{{asset('/material')}}/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
-  <script src="{{asset('admin')}}/assets/js/plugins/chartist.min.js"></script>
+  <script src="{{asset('/material')}}/assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="{{asset('admin')}}/assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="{{asset('/material')}}/assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{{asset('admin')}}/assets/js/material-dashboard.js?v=2.1.0"></script>
+  <script src="{{asset('/material')}}/assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="{{asset('admin')}}/assets/demo/demo.js"></script>
+  <script src="{{asset('/material')}}/assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -461,13 +468,7 @@
       });
     });
   </script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
-
-    });
-  </script>
+ 
 </body>
 
 </html>

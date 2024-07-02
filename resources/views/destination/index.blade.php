@@ -7,7 +7,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">All Users</h4>
+                  <h4 class="card-title ">Toutes Destinations</h4>
                   
                 </div>
                 <div class="card-body">
@@ -22,7 +22,7 @@
                           pays
                         </th>
                         <th>
-                          Région
+                          Region
                         </th>
                         <th>
                           Description

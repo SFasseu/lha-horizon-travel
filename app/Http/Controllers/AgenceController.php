@@ -12,7 +12,7 @@ class AgenceController extends Controller
      */
     public function index()
     {
-        //
+        return view('agence.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class AgenceController extends Controller
      */
     public function create()
     {
-        //
+        return view('agence.create');
     }
 
     /**
@@ -28,7 +28,32 @@ class AgenceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+           
+            'name' => 'required|string|max:255|min:2',
+            'adresse' => 'required|string|max:255|min:2',
+            'telephone' => 'required|string|max:9|min:9',
+            'email' => 'required|email|unique:agences',
+          
+        ]);
+
+        //Récupération des données du formulaire
+        $name = $request->input('name');
+        $adresse = $request->input('adresse');
+        $telephone = $request->input('telephone');
+        $email = $request->input('email');
+       
+       
+
+        //création de l'utilisateur
+        $user = new agence();
+        $user->name = $name;
+        $user->adresse= $adresse;
+        $user->telephone= $telephone;
+        $user->email = $email;
+        $user->save();
+
+        return redirect()->route('agence.index');
     }
 
     /**

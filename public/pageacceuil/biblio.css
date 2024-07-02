@@ -1,0 +1,132 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+    
+header{
+    height: auto;
+    padding: px;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+header i.icon{
+    position: absolute;
+    right: 30px;
+    top: 32px;
+    z-index: 10;
+}
+header .logo h2{
+    font-size: 35px;
+    color:chocolate;
+}
+header nav .nav-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+header nav .nav-list .list a{
+    display:block;
+    
+    
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+header nav .nav-list .list a:hover{
+    color:coral;
+}
+@media(max-width:400px) {
+  header naV .nav-list{
+    display: block;
+    text-align: center;
+    padding: 0
+  }  
+  header .logo{
+    text-align: center;}
+}
+/*style de la section*/
+.section_service{
+    padding: 20px 0;
+}
+section{
+height: 700px;
+background-image: url("voyage.jpg");
+background-size:cover ;
+background-position: center;
+text-align: center;
+position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+}
+.section_content{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+.biblio-title{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.desc-section{
+    color: #fff;
+    font-size: 18px;
+}
+.btn-button{
+    background: #7cb62f;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.container{
+    border:navy;
+    
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+    margin: 50px;
+    
+    
+}
+.form-sign{
+    background-color: white;
+    width: 400px;
+    color:black;
+    border-radius: 8px;
+    justify-content: left;
+}
+.input-form{
+    margin: 10px;
+    
+}.label-form{
+ width: 100px;
+}
+
+.card-header{
+    background-color:blueviolet;
+    margin: 15px;
+    padding: 15px;
+}
+.bouton{
+background-color:blueviolet;;
+border: fuchsia;
+padding:10px ;
+border-radius:8px;
+width: 120px;
+}
+.forgot{
+color: purple;
+
+
+}

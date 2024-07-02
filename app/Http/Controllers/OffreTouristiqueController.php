@@ -20,7 +20,7 @@ class OffreTouristiqueController extends Controller
      */
     public function create()
     {
-        //
+        return view('offre.create');
     }
 
     /**
@@ -28,7 +28,29 @@ class OffreTouristiqueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            
+            'name' => 'required|string|max:255|min:2',
+            'description'=>'required|string|max:255|',
+            'prix' => 'required|integer|max:255|min:2',
+            'duree' => 'required|integer|max:255|min:2',
+            
+        ]);
+
+        //Récupération des données du formulaire
+        $name = $request->input('name');
+        $description = $request->input('email');
+        $prix = $request->input('prix');
+        $duree = $request->input('duree');
+        //création de l'utilisateur
+        $offreTouristique = new OffreTouristique();
+        $offreTouristique->name = $name;
+        $offreTouristique->description = $description;
+        $offreTouristique->prix = $prix;
+        $offreTouristique->duree = $duree;
+        $offreTouristique->save();
+
+        return redirect()->route('offre.index');
     }
 
     /**
@@ -44,7 +66,7 @@ class OffreTouristiqueController extends Controller
      */
     public function edit(OffreTouristique $offreTouristique)
     {
-        //
+        return view('OffreTouristique.edit',compact('$offreTouristique'));
     }
 
     /**
@@ -52,14 +74,25 @@ class OffreTouristiqueController extends Controller
      */
     public function update(Request $request, OffreTouristique $offreTouristique)
     {
-        //
+        $name = $request->input('name');
+        $description = $request->input('description');
+        $prix = $request->input('prix');
+        $duree = $request->input('duree');
+
+        $offreTouristique->name= $name;
+        $offreTouristique->description = $description;
+        $offreTouristique->prix= $prix;
+        $offreTouristique->duree= $duree;
+        $offreTouristique->save();
+
+        return redirect()->route('offre.index');
+    }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OffreTouristique $offreTouristique)
+    
     {
-        //
-    }
+        
 }

@@ -20,7 +20,7 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
+        return view('reservation.create');
     }
 
     /**
@@ -28,7 +28,24 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'email' => 'required|email|unique:users',
+            'name' => 'required|string|max:255|min:2',
+            'password' => 'required|min:6|confirmed',
+        ]);
+
+        //Récupération des données du formulaire
+        $name = $request->input('datedebut');
+        $email = $request->input('datefin');
+        
+
+        //création de l'utilisateur
+        $user = new reservation();
+        $user->datedebut = $name;
+        $user->datefin = $email;
+        $user->save();
+
+        return redirect()->route('reservation.index');
     }
 
     /**

@@ -17,7 +17,7 @@ class UserController extends Controller
     //    récupération de tous les utlisateurs
         $users = User::all();
         
-        return view('user.index', ['users' => $users]);
+        return view('user.index', ['user' => $users]);
     }
 
     /**
@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -33,13 +33,34 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'email' => 'required|email|unique:users',
+            'name' => 'required|string|max:255|min:2',
+            'password' => 'required|min:6|confirmed',
+        ]);
+
+        //Récupération des données du formulaire
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $confirmPasswrod = $request->input('password_confirmation');
+
+        //création de l'utilisateur
+        $user = new User();
+        $user->name = $name;
+        $user->email = $email;
+        $user->password = $password;
+        $user->save();
+
+        return redirect()->route('user.index');
     }
+
+    
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(user $user)
     {
         //
     }
@@ -47,24 +68,35 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(user $user)
     {
-        //
+        return view('user.edit',compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $name = $request->input('name');
+        $email = $request->input('email');
+
+        $user->email = $email;
+        $user->name = $name;
+        $user->save();
+
+        return redirect()->route('user.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $user=user::find($id);
+        $user->delete();
+        return redirect()->route('user.index');
+       
+
     }
 }

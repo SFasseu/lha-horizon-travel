@@ -20,7 +20,7 @@ class HebergementController extends Controller
      */
     public function create()
     {
-        //
+        return view('hebergement.create');
     }
 
     /**
